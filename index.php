@@ -99,7 +99,30 @@ $this->addCustomTag($favicon);
 
 </head>
 
-<body >
+<body class="no-js <?php echo $currentComponent;
+	
+	if ($articleId) {
+		echo ' article-' . $articleId;
+	}
+	if ($itemId) {
+		echo ' item-' . $itemId;
+	}
+	if ($catId) {
+		echo ' category-' . $catId;
+	}
+	if ($default) {
+		echo ' default';
+	}
+	if ($pageClass) {
+		echo ' ' . $pageClass;
+} 
+if ($currentAlias) {
+		echo ' ' . $currentAlias;
+} 
+if (!$user->guest) {
+  echo ' edit-s';
+    }
+?>
 <?php 
 if ($params['developer_mode']) {
 
