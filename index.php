@@ -99,7 +99,7 @@ $this->addCustomTag($favicon);
 
 </head>
 
-<body >
+<body class="no-js">
 <?php 
 if ($params['developer_mode']) {
 
